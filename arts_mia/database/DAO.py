@@ -8,7 +8,7 @@ class DAO:
         pass
 
     @staticmethod
-    def readObjects():
+    def get_all_nodes():
         conn = DBConnect.get_connection()
         result = []
         cursor = conn.cursor(dictionary=True)
@@ -23,7 +23,7 @@ class DAO:
         return result
 
     @staticmethod
-    def readConnessioni(objects_dict): # Riceve la idMap degli Object
+    def get_all_edges(objects_dict): # Riceve la idMap degli Object
         conn = DBConnect.get_connection()
         result = []
         cursor = conn.cursor(dictionary=True)

@@ -55,8 +55,7 @@ class View():
 
     def create_alert(self, message):
         dlg = ft.AlertDialog(title=ft.Text(message))
-        self._page.dialog = dlg
-        dlg.open = True
+        self._page.open(dlg)
         self._page.update()
 
     def update_page(self):
